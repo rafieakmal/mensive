@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div v-if="next">
-                            <button class="btn text-white" type="button">Next part</button>
+                            <button @click="pageNext()" class="btn text-white" type="button">Next part</button>
                         </div>
                 </div>
             </div>
@@ -75,6 +75,11 @@
         methods: {
             onComplete() {
                 this.next = true
+            },
+
+            pageNext() {
+                console.log('hi')
+                this.$router.push('/next')
             }
         }
     };
